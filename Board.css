@@ -1,0 +1,128 @@
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+thead{
+/* background: #007d75; */
+background: #FD615C;
+color: #FFFFFF;
+text-align:center;
+}
+th, td {
+    text-align: center;
+    padding: 8px;
+    /* border-bottom: 2px solid #529A86; */
+    border-bottom: 1px solid #FFFFFF;
+}
+body {
+  min-height: 450px;
+  height: 100vh;
+  margin: 0;  
+  color: #000000;
+  background: #E9D8CF;
+  font-family: 'Open Sans', sans-serif;  
+}
+.center {
+    margin: auto;
+    width: 100%;
+}
+tr:nth-child(even){background-color: #E9D8CF; }
+
+.circle-text {
+  width:85%;
+}
+.circle-text:after {
+  content: "";
+  display: block;
+  width: 100%;
+  height:0;
+  padding-bottom: 100%;
+  color:#FFFFFF;
+  -moz-border-radius: 50%; 
+  -webkit-border-radius: 50%; 
+  border-radius: 50%;
+}
+.circle-text div {
+  float:left;
+  width:100%;
+  padding-top:50%;
+  line-height:1em;
+  margin-top:-0.5em;
+  text-align:center;
+    font-size: 300%; 
+}
+.solo:after{
+/* background: #F16A70;  */
+background: #EF9A9A;
+}
+.duo:after{
+/* background: #B1D877; */
+background: #F48FB1;
+}
+.trio:after{
+/* background: #8CDCDA; */
+background: #CE93D8;
+}
+.quadro:after{
+/* background: #819975; */
+background: #FF8A65
+;
+}
+.box {
+  position: relative;
+}
+.ribbon {
+  position: absolute;
+  left: -5px; top: -5px;
+  z-index: 1;
+  overflow: hidden;
+  width: 75px; height: 75px;
+  text-align: right;
+}
+.ribbon span {
+  font-size: 10px;
+  font-weight: bold;
+  color: #FFF;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 20px;
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  width: 100px;
+  display: block;
+  background: #FD615C;
+  background: linear-gradient(#FD615C 0%, #EC9C8F 100%);
+  box-shadow: 0 3px 10px -5px rgba(0, 0, 0, 1);
+  position: absolute;
+  top: 19px; left: -21px;
+}
+.ribbon span::before {
+  content: "";
+  position: absolute; left: 0px; top: 100%;
+  z-index: -1;
+  border-left: 3px solid #FD615C;
+  border-right: 3px solid transparent;
+  border-bottom: 3px solid transparent;
+  border-top: 3px solid #FD615C;
+}
+.ribbon span::after {
+  content: "";
+  position: absolute; right: 0px; top: 100%;
+  z-index: -1;
+  border-left: 3px solid transparent;
+  border-right: 3px solid #FD615C;
+  border-bottom: 3px solid transparent;
+  border-top: 3px solid #FD615C;
+}
+.zone {
+  background: #FD615C;
+  color: #FFFFFF;
+  text-align:center;
+  width: 100%;
+  height: 50px;
+  font-family: 'Open Sans', sans-serif; 
+  font-size: 32px;
+  padding: 30px;
+  font-weight: bold;
+  border-bottom: 1px solid #FFFFFF;
+}
