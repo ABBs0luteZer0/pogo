@@ -122,7 +122,8 @@ background: #FF8A65
   height: 50px;
   font-family: 'Open Sans', sans-serif; 
   font-size: 32px;
-  padding: 30px;
+  padding-top: 30px;
+  padding-bottom: 30px;
   font-weight: bold;
   border-bottom: 1px solid #FFFFFF;
 }
