@@ -3,7 +3,6 @@ table {
     width: 100%;
 }
 thead{
-/* background: #007d75; */
 background: #004D40;
 color: #FFFFFF;
 text-align:center;
@@ -11,7 +10,6 @@ text-align:center;
 th, td {
     text-align: center;
     padding: 8px;
-    /* border-bottom: 2px solid #529A86; */
     border-bottom: 2px solid #00796B;
 }
 body {
@@ -53,19 +51,15 @@ tr:nth-child(even){background-color: #FFFFFF;}
     font-size: 300%; 
 }
 .solo:after{
-/* background: #F16A70;  */
 background: #B9F6CA;
 }
 .duo:after{
-/* background: #B1D877; */
 background: #EEFF41;
 }
 .trio:after{
-/* background: #8CDCDA; */
 background: #FFC400;
 }
 .quadro:after{
-/* background: #819975; */
 background: #FF6D00;
 }
 .box {
@@ -113,4 +107,10 @@ background: #FF6D00;
   border-right: 3px solid #004D40;
   border-bottom: 3px solid transparent;
   border-top: 3px solid #004D40;
+}
+.zone {
+  background: #004D40;
+  color: #FFFFFF;
+  text-align:center;
+  width: 100%;
 }
