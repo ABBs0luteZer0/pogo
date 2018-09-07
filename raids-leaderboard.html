@@ -1,0 +1,197 @@
+<html lang="en">
+<head>
+  <title>Leader Board</title>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+
+<!--
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+-->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <meta name="twitter:card" content="Raid Leader Board">
+  <meta name="twitter:site" content="@ABBS0luteZer0">
+  <meta name="twitter:title" content="Raid Leader Board">
+  <meta name="twitter:description" content="https://abbs0lutezer0.github.io/pogo/">
+  <meta name="twitter:image" content="https://abbs0lutezer0.github.io/pogo/static/image/large.png">
+  <meta name="twitter:creator" content="@ABBS0luteZer0">
+  <meta property="og:image" content="https://abbs0lutezer0.github.io/pogo/static/image/large.png" itemprop="thumbnailUrl">
+  <meta property="og:title" content="Raid Leader Board">
+  <meta property="og:url" content="https://abbs0lutezer0.github.io/pogo/">
+  <meta property="og:site_name" content="@ABBS0luteZer0">
+  <meta property="og:description" content="https://abbs0lutezer0.github.io/pogo/">
+
+  <link rel="stylesheet" media="screen" href="./static/css/Board.css?v=1.0">
+  <script src="./static/js/raid-data.js"></script>
+  <script src="./static/js/raid-leaderboard.js"></script>
+  
+  <style type="text/css">
+  </style>
+
+</head>
+<body onload="populateRaidData();">
+<nav class="navbar navbar-fixed-top navbar-light pTheme">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar pAntiTheme"></span>
+        <span class="icon-bar pAntiTheme"></span>
+        <span class="icon-bar pAntiTheme"></span>                        
+      </button>
+      <a class="navbar-brand pTheme" href="#">Bengaluru L40</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a class="pTheme" href="./player-leaderboard.html">L40 Club</a></li>
+        <li><a class="pTheme" href="./raids-leaderboard.html">Raids</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<div class="container-fluid navbar-fixed-top rSub">
+  <div class="row pAntiTheme">
+    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4"><h5 class="active">Ongoing</h5></div>
+    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 inactive"><h5>Level 5</h5></div>
+    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 inactive"><h5>Level 4</h5></div> 
+  </div>
+    <div class="marginFix row">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+<div class="table-responsive pLeftMargin">
+  <table class="table tTheme pLeftMargin">
+    <thead>
+      <tr>
+        <th width="20%"> Pokemon</th>
+        <th width="15%"> Solo</th>
+        <th width="15%"> Duo</th>
+        <th width="15%"> Trio</th>
+        <th width="15%"> Quadro</th>
+        <th> </th>
+      </tr>
+    </thead>
+  </table>
+</div>
+</div>
+</div>
+</div>
+<div class="container-fluid rTable">
+  <div class="marginFix row">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+<div class="table-responsive" style="text-align: left;">
+  <table class="table tTheme">
+    <colgroup>
+      <col style="width:20%">
+      <col style="width:15%">
+      <col style="width:15%">
+      <col style="width:15%">
+      <col style="width:15%">
+      <col>
+    </colgroup> 
+    <tbody id="rLeaderTable">
+    <tr>
+      <td>
+      <img src="https://serebii.net/pokemongo/pokemon/248.png"/><br/><h6>⭐️⭐️⭐️⭐️</h6></td>
+      <td></td>
+      <td><span class="rounded-circle duo">61</span></td>
+      <td></td>
+      <td></td>
+    <td></td></tr>
+    <tr>
+      <td><img src="https://serebii.net/pokemongo/pokemon/112.png"/><br/><h6>⭐️⭐️⭐️⭐️</h6></td>
+      <td></td>
+      <td><span class="rounded-circle duo">23</span></td>
+      <td></td>
+      <td></td>
+    <td></td></tr>
+    <tr>
+      <td><img src="https://serebii.net/pokemongo/pokemon/359.png"/><br/><h6>⭐️⭐️⭐️⭐️</h6></td>
+      <td></td>
+      <td><span class="rounded-circle duo">85</span></td>
+      <td></td>
+      <td></td>
+    <td></td></tr>
+    <tr>
+      <td><img src="https://serebii.net/pokemongo/pokemon/068.png"/><br/><h6>⭐⭐️️⭐️</h6></td>
+      <td><span class="rounded-circle solo">81</span></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    <td></td></tr>
+    <tr>
+      <td><img src="https://serebii.net/pokemongo/pokemon/221.png"/><br/><h6>⭐️⭐️⭐️</h6></td>
+      <td><span class="rounded-circle solo">88</span></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    <td></td></tr>
+    <tr>
+      <td><img src="https://serebii.net/pokemongo/pokemon/249.png"/><br/><h6>⭐️⭐️⭐⭐️️️️️⭐️</h6></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td><span class="rounded-circle quadro">20</span></td>
+    <td></td></tr>
+    <tr>
+      <td><img src="https://serebii.net/pokemongo/pokemon/379.png"/><br/><h6>⭐️⭐️⭐⭐️️️️️⭐️</h6></td>
+      <td></td>
+      <td></td>
+      <td><span class="rounded-circle trio">39</span></td>
+      <td></td>
+    <td></td></tr>
+    <tr>
+      <td><img src="https://serebii.net/pokemongo/pokemon/378.png"/><br/><h6>⭐️⭐️⭐⭐️️️️️⭐️</h6></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td><span class="rounded-circle quadro">45</span></td>
+    <td></td></tr>
+    <tr>
+      <td><img src="https://serebii.net/pokemongo/pokemon/076.png"/><br/><h6>⭐️⭐️⭐️⭐️</h6></td>
+      <td></td>
+      <td><span class="rounded-circle duo">47</span></td>
+      <td></td>
+      <td></td>
+    <td></td></tr>
+    <tr>
+      <td><img src="https://serebii.net/pokemongo/pokemon/142.png"/><br/><h6>⭐⭐️️⭐️</h6></td>
+      <td><span class="rounded-circle solo">60</span></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    <td></td></tr>
+    <tr>
+      <td><img src="https://serebii.net/pokemongo/pokemon/095.png"/><br/><h6>⭐⭐️️⭐️</h6></td>
+      <td><span class="rounded-circle solo">37</span></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    <td></td></tr>
+    <tr>
+      <td><img src="https://serebii.net/pokemongo/pokemon/344.png"/><br/><h6>⭐⭐️️⭐️</h6></td>
+      <td><span class="rounded-circle solo">10</span></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    <td></td></tr>
+    <tr>
+      <td><img src="https://serebii.net/pokemongo/pokemon/134.png"/><br/><h6>⭐⭐️️⭐️</h6></td>
+      <td><span class="rounded-circle solo">50</span></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    <td></td></tr>
+    </tbody>
+  </table>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>
