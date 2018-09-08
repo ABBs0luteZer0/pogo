@@ -29,25 +29,25 @@ function populateRaidData(){
 			txt += "<td><span class='rounded-circle solo'>"
 				+ myObj[x].solo +"</span></td>";
 		}else{
-			txt += "<td></td>";
+			txt += "<td>&nbsp;</td>";
 		}
 		if(myObj[x].duo!=""){
 			txt += "<td><span class='rounded-circle duo'>"
 				+ myObj[x].duo +"</span></td>";
 		}else{
-			txt += "<td></td>";
+			txt += "<td>&nbsp;</td>";
 		}
 		if(myObj[x].trio!=""){
 			txt += "<td><span class='rounded-circle trio'>"
 				+ myObj[x].trio +"</span></td>";
 		}else{
-			txt += "<td></td>";
+			txt += "<td>&nbsp;</td>";
 		}
 		if(myObj[x].quadro!=""){
 			txt += "<td><span class='rounded-circle quadro'>"
 			+ myObj[x].quadro +"</span></td>";
 		}else{
-			txt += "<td></td>";
+			txt += "<td>&nbsp;</td>";
 		}
 		
 		txt += "<td></td></tr>";
