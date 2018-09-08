@@ -17,6 +17,8 @@ function sortBy(sortColumn){
 		val1=numberWithCommas(myObj[0].stardust);
 		val2=numberWithCommas(myObj[1].stardust);
 		val3=numberWithCommas(myObj[2].stardust);
+		
+		$('#rankTitle').html("Stardust");
 	}else if(sortColumn == 'xp'){
 		myObj.sort(function (a, b) {
     			return Number(b.xp)-Number(a.xp);
@@ -28,6 +30,8 @@ function sortBy(sortColumn){
 		val1=numberWithCommas(myObj[0].xp);
 		val2=numberWithCommas(myObj[1].xp);
 		val3=numberWithCommas(myObj[2].xp);
+		
+		$('#rankTitle').html("XP");
 	}else{
 		myObj.sort(function (a, b) {
 			try {
@@ -52,6 +56,8 @@ function sortBy(sortColumn){
 		 // + "<small class='text-muted'>(" + myObj[1].startdate + ")</small>";
 		val3=myObj[2].l40date;
 		 // + "<small class='text-muted'>(" + myObj[2].startdate + ")</small>";
+		
+		$('#rankTitle').html("L40 Date <small class='text-muted '>(Start Date)</small>");
 	}
 	// Set the data
 	document.getElementById("RankingTable1").innerHTML = 
