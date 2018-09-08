@@ -8,26 +8,26 @@ function sortBy(sortColumn){
 	//
 	if(sortColumn=='stardust'){
 		myObj.sort(function (a, b) {
-    		return b.stardust.localeCompare(a.stardust);
+    		return Number(b.stardust)-Number(a.stardust);
 		});
 		$('#stardust h5').removeClass( "inactive" );
 		$('#xp h5').addClass( "inactive" );
 		$('#l40date h5').addClass( "inactive" );
 
-		val1=myObj[0].stardust;
-		val2=myObj[1].stardust;
-		val3=myObj[2].stardust;
+		val1=numberWithCommas(myObj[0].stardust);
+		val2=numberWithCommas(myObj[1].stardust);
+		val3=numberWithCommas(myObj[2].stardust);
 	}else if(sortColumn == 'xp'){
 		myObj.sort(function (a, b) {
-    			return b.xp.localeCompare(a.xp);
+    			return Number(b.xp)-Number(a.xp);
 		});
 		$('#xp h5').removeClass( "inactive" );
 		$('#stardust h5').addClass( "inactive" );
 		$('#l40date h5').addClass( "inactive" );
 
-		val1=myObj[0].xp;
-		val2=myObj[1].xp;
-		val3=myObj[2].xp;
+		val1=numberWithCommas(myObj[0].xp);
+		val2=numberWithCommas(myObj[1].xp);
+		val3=numberWithCommas(myObj[2].xp);
 	}else{
 		myObj.sort(function (a, b) {
 			try {
@@ -63,9 +63,9 @@ function sortBy(sortColumn){
     for (x in myObj) {
     	if(x>2){
     		if(sortColumn=='stardust'){
-				valCurr=myObj[x].stardust;
+				valCurr=numberWithCommas(myObj[x].stardust);
 			}else if(sortColumn == 'xp'){
-				valCurr=myObj[x].xp;
+				valCurr=numberWithCommas(myObj[x].xp);
 			}else{
 				valCurr=myObj[x].l40date+ 
 					"<small class='text-muted'>(" + myObj[x].startdate + ")</small>";
@@ -81,4 +81,9 @@ function sortBy(sortColumn){
 }
 function populatePlayerLeaderBoard(){
 	sortBy('l40date');
+}
+const numberWithCommas = (x) => {
+  var parts = x.toString().split(".");
+  parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  return parts.join(".");
 }
